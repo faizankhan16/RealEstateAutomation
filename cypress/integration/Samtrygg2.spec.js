@@ -46,6 +46,6 @@ describe('Create an account as tenant and landlord', () => {
 
     it.only('Create an ad', () => {
         login.signIn('mohsin+020@samtrygg.se', 'Admin@123')
-        ad.createAd('4 fl', '18', 'Jun', '20', '2000', '5', 1600)
+        ad.createAd()
     })
 })
