@@ -1,3 +1,6 @@
 {
-    "baseUrl": "https://stage02.dev.samtrygg.se/"
+    "baseUrl": "https://stage02.dev.samtrygg.se/",
+    "env": {
+        "MAILOSAUR_API_KEY": "5sIuSfkumASOHakg"
+    }
 }
