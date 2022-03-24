@@ -1,59 +1,46 @@
-
+import selectors from "../../fixtures/selectors.json"
 class SignIn{ 
+
+signInDetails(email, pass) {
+    cy.contains(/sign.in/i).click({force: true})
+    cy.get(selectors.header).contains(/sign.in/i).should('be.visible')
+
+    //Email
+    cy.get(selectors.email).type(email)
+    cy.get(selectors.email).should('have.value', email)
+
+    //Password
+    cy.get(selectors.password).type(pass)
+    cy.get(selectors.password).should('have.value', pass)
+}
+
 
 signIn(email, pass) {
 
     //Accessing Sign In page
-    cy.contains(/sign.in/i).click({force: true})
-    cy.get('.contentH1').contains(/sign.in/i).should('be.visible')
-
-    //Email
-    cy.get('#loginEmail').type(email)
-    cy.get('#loginEmail').should('have.value', email)
-
-    //Password
-    cy.get('#loginPassword').type(pass)
-    cy.get('#loginPassword').should('have.value', pass)
+    this.signInDetails(email, pass)
 
     //Submit
-    cy.get('.col > .button').click({force: true})
+    cy.get(selectors.submitButton).click({force: true})
 
 }
 
 signInViaEnter(email, pass) {
 
     //Accessing Sign In page
-    cy.contains(/sign.in/i).click({force: true})
-    cy.get('.contentH1').contains(/sign.in/i).should('be.visible')
-
-    //Email
-    cy.get('#loginEmail').type(email)
-    cy.get('#loginEmail').should('have.value', email)
-
-    //Password
-    cy.get('#loginPassword').type(pass)
-    cy.get('#loginPassword').should('have.value', pass).type('{enter}')
+    this.signInDetails(email, pass).type('{enter}')
 
 }
 signInRememberMe(email, pass) {
 
     //Accessing Sign In page
-    cy.contains(/sign.in/i).click({force: true})
-    cy.get('.contentH1').contains(/sign.in/i).should('be.visible')
-
-    //Email
-    cy.get('#loginEmail').type(email)
-    cy.get('#loginEmail').should('have.value', email)
-
-    //Password
-    cy.get('#loginPassword').type(pass)
-    cy.get('#loginPassword').should('have.value', pass)
+    this.signInDetails(email, pass)
 
     //Remember me
-    cy.get('#save-password').check({force: true}).should('be.checked')
+    cy.get(selectors.rememberMe).check({force: true}).should('be.checked')
 
     //Submit
-    cy.get('.col > .button').click({force: true})
+    cy.get(selectors.submitButton).click({force: true})
 
 }
 
