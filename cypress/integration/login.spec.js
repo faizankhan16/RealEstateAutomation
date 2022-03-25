@@ -9,7 +9,6 @@ const login = new signIn()
 const chPass = new changePassword()
 
 describe('login form', () => {
-    
 
     beforeEach('visit the website', () => {
         cy.visit('/')
@@ -18,37 +17,37 @@ describe('login form', () => {
     })
 
     //The user is able to login with valid credentials
-    it.only('Verify that a user can login with valid credentials', () => {
+    it('Verify that a user can login with valid credentials', () => {
         login.signIn(email, newPassword)
         logout.signOut()
     })
 
     //The user is not able to login with invalid credentials
-    it.only('Verify that a user is unable to login with invalid credentials', () => {
+    it('Verify that a user is unable to login with invalid credentials', () => {
         login.signIn(invalidEmail, invalidPassword)
         cy.get(selectors.validationMessage).should('contain', 'The e-mail or password you filled in is incorrect')
     })
 
     //The user cannot login without providing credentials
-    it.only('Verify that a user cannot login without credentials', () => {
+    it('Verify that a user cannot login without credentials', () => {
         cy.get(selectors.submitButton).click()
         cy.get(selectors.validationMessage).should('contain', 'The e-mail or password you filled in is incorrect')
     })
 
     //Verify Forgot Password functionality
-    it.only('Verify the forgot password functionality', () => {
+    it('Verify the forgot password functionality', () => {
         cy.get(selectors.forgotPass).should('contain', 'Forgot your password?').click()
         cy.get(selectors.forgotPassHeader).should('contain', 'Forgot password')
     })
 
     //Remember me feature
-    it.only('Verify if a user can select the remember me checkbox', () => {
+    it('Verify if a user can select the remember me checkbox', () => {
         login.signInRememberMe(email, newPassword)
         logout.signOut()
    })
 
    //Checking the enter button
-   it.only('Verify a the user can login by pressing the enter button', () => {
+   it('Verify a the user can login by pressing the enter button', () => {
     login.signInViaEnter(email, newPassword)
     logout.signOut()
    })

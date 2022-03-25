@@ -28,7 +28,16 @@ signIn(email, pass) {
 signInViaEnter(email, pass) {
 
     //Accessing Sign In page
-    this.signInDetails(email, pass).type('{enter}')
+    cy.contains(/sign.in/i).click({force: true})
+    cy.get(selectors.header).contains(/sign.in/i).should('be.visible')
+
+    //Email
+    cy.get(selectors.email).type(email)
+    cy.get(selectors.email).should('have.value', email)
+
+    //Password
+    cy.get(selectors.password).type(pass)
+    cy.get(selectors.password).should('have.value', pass).type('{enter}')
 
 }
 signInRememberMe(email, pass) {
