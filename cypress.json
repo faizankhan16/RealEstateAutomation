@@ -1,5 +1,6 @@
 {
     "baseUrl": "https://stage02.dev.samtrygg.se/",
+    "pageLoadTimeout": 120000,
     "env": {
         "MAILOSAUR_API_KEY": "5sIuSfkumASOHakg"
     }
