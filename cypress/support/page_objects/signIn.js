@@ -1,7 +1,9 @@
 import selectors from "../../fixtures/selectors.json"
+import credential from "../../fixtures/credential.json"
+const { emailTenant, newPassword, invalidEmail, invalidPassword, oldPassword } = credential.tenantLogin
 class SignIn{ 
 
-signInDetails(email, pass) {
+signInDetails(email, password) {
     cy.contains(/sign.in/i).click({force: true})
     cy.get(selectors.header).contains(/sign.in/i).should('be.visible')
 
@@ -10,15 +12,15 @@ signInDetails(email, pass) {
     cy.get(selectors.email).should('have.value', email)
 
     //Password
-    cy.get(selectors.password).type(pass)
-    cy.get(selectors.password).should('have.value', pass)
+    cy.get(selectors.password).type(password)
+    cy.get(selectors.password).should('have.value', password)
 }
 
 
-signIn(email, pass) {
+signIn(email, password) {
 
     //Accessing Sign In page
-    this.signInDetails(email, pass)
+    this.signInDetails(email, password)
 
     //Submit
     cy.get(selectors.submitButton).click({force: true})
