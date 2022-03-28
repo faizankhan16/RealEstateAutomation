@@ -1,7 +1,7 @@
 import selectors from "../../fixtures/selectors.json"
-const { viewBooking } = selectors;
+const { viewBooking, viewCancelling } = selectors;
 
-class BookAView {
+class View {
 
     bookAView (address, viewDate) {
         cy.get(viewBooking.homePage).click()
@@ -25,6 +25,21 @@ class BookAView {
         cy.get(viewBooking.viewCard).should('contain', viewDate)
 }
 
+
+    cancelAView () {
+        cy.get(selectors.dropDown).contains(/.+viewings.+/i).click({force: true})
+        cy.get('body').then(body => {
+            if (body.text().includes('Join the digital viewing')){
+                cy.get(viewCancelling.viewCardOptions).click({force: true})
+                cy.get(viewCancelling.viewOptionsDropdown).contains('Cancel').click({force: true})
+                cy.get(viewCancelling.cancelButton).click({force: true})
+                cy.get(viewBooking.confirmViewing).click({force: true})
+            } else {
+                cy.log('You do not have a view booked.')
+            }
+        })
+    }
+
 }
 
-export default BookAView
+export default View
