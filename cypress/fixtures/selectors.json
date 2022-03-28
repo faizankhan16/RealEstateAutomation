@@ -53,9 +53,16 @@
     "viewBooking": {
         "homePage": "img[alt='Landing image']",
         "searchButtonLandingPage": "#hero-search",
-        "selectAHome": "span[class='leftContent']",
+        "selectAHome": "a[class='open-item']",
         "crossButton": "span[class='icon icon-cross-circle']",
-        "moveInDate": "#startdate"
+        "bookAViewing": "a[href='javascript:']",
+        "houseName": "h1[class='add-content__h1']",
+        "viewTimesHeader": "[class='mod-header']",
+        "viewingDay": "div[class='mon-row']",
+        "viewingTime": "#date_3-31-2022 label[data-value='63784306800']",
+        "confirmViewing": "div[class='featherlight-content'] input[value='Yes '][class='button']",
+        "viewNavBar": "#divSitemap",
+        "viewCard": "div[class='viewing-card'] div[class='viewing-card__head-date']"
 
     }
 
