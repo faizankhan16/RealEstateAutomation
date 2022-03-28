@@ -49,6 +49,14 @@
     "oldPassword": "#OldPass",
     "newPassword": "#Pass",
     "confirmNewPass": "#ConfirmPass",
-    "saveNewPass": "input[onclick='return ValidatePasswords();'']"
+    "saveNewPass": "input[onclick='return ValidatePasswords();'']",
+    "viewBooking": {
+        "homePage": "img[alt='Landing image']",
+        "searchButtonLandingPage": "#hero-search",
+        "selectAHome": "span[class='leftContent']",
+        "crossButton": "span[class='icon icon-cross-circle']",
+        "moveInDate": "#startdate"
+
+    }
 
 }
