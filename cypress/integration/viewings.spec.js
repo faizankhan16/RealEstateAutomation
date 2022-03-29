@@ -19,15 +19,22 @@ describe('Tests to book a view', () => {
         cy.get('.language').click()
     })
 
-    it('Verify that the tenant can a book a view', () => {
+    it('Verify that the tenant can a book a viewing', () => {
         login.signIn(emailTenant, newPassword)
         viewing.bookAView('Brännkyrkagatan 79, 118 23 Stockholm, Sverige', '31')
+        logout.signOut()
+    })
+
+    it('Verify that the tenant can reschedule a viewing', () => {
+        login.signIn(emailTenant, newPassword)
+        viewing.rescheduleAView('31')
         logout.signOut()
     })
 
     it('Verify that the tenant can cancel a viewing', () => {
         login.signIn(emailTenant, newPassword)
         viewing.cancelAView()
-        // logout.signOut()
+        logout.signOut()
     })
+
 })

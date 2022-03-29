@@ -59,7 +59,7 @@
         "houseName": "h1[class='add-content__h1']",
         "viewTimesHeader": "[class='mod-header']",
         "viewingDay": "div[class='mon-row']",
-        "viewingTime": "#date_3-31-2022 label[data-value='63784306800']",
+        "selectViewingTime": "#date_3-31-2022 label[data-value='63784306800']",
         "confirmViewing": "div[class='featherlight-content'] input[value='Yes '][class='button']",
         "viewNavBar": "#divSitemap",
         "viewCard": "div[class='viewing-card'] div[class='viewing-card__head-date']"
@@ -68,6 +68,11 @@
         "viewCardOptions": "path[d='m12 17c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z']",
         "viewOptionsDropdown": "div[class='manage-btn__block']",
         "cancelButton": "input[data-featherlight='#confirm-cancelation'][value='Cancel ']"
-    }
-
+    },
+    "viewRescheduling": {
+        "rescheduleButton": "a[class='sam-btn manage-btn__item m-0 sam-btn--white'][class='sam-btn manage-btn__item m-0 sam-btn--white']",
+        "confirmRescheduleWindow": "form[onsubmit='return confirmBooking(event)'][method='post']",
+        "yesButton": "input[value='Yes '][class='button']",
+        "reselectViewingTime": "#date_3-31-2022 label[data-value='63784308000']"
+}
 }
