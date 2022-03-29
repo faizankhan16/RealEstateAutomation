@@ -63,7 +63,11 @@
         "confirmViewing": "div[class='featherlight-content'] input[value='Yes '][class='button']",
         "viewNavBar": "#divSitemap",
         "viewCard": "div[class='viewing-card'] div[class='viewing-card__head-date']"
-
+    },
+    "viewCancelling": {
+        "viewCardOptions": "path[d='m12 17c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z']",
+        "viewOptionsDropdown": "div[class='manage-btn__block']",
+        "cancelButton": "input[data-featherlight='#confirm-cancelation'][value='Cancel ']"
     }
 
 }
