@@ -4,12 +4,16 @@ import changePassword from "../support/page_objects/changePassword.js"
 import credential from "../fixtures/credential.json"
 import selectors from "../fixtures/selectors.json"
 const { email, newPassword, invalidEmail, invalidPassword, oldPassword } = credential.landlordLogin;
-const logout = new signOut()
-const login = new signIn()
-const chPass = new changePassword()
+
+
 
 describe('login form', () => {
 
+beforeAll('visit the website', () => {
+    var logout = new signOut()
+    var login = new signIn()
+    var chPass = new changePassword()
+})
     beforeEach('visit the website', () => {
         cy.visit('/')
         cy.get(selectors.language).click()
@@ -61,4 +65,11 @@ describe('login form', () => {
     logout.signOut()
     login.signIn(email, newPassword)
    })
+
+   afterAll('visit the website', () => {
+    logout = null
+     login =null
+     chPass = null
 })
+})
+

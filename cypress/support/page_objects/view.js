@@ -10,8 +10,8 @@ class View {
         cy.get(viewBooking.houseName).should('be.visible')
         cy.get(viewBooking.bookAViewing).contains('Book a viewing').click({force: true})
         //If the header is visible
-        cy.get('body').then($body => {
-            if ($body.text().includes('Booked viewing')) {
+        cy.get('body').then(body => {
+            if (body.text().includes('Booked viewing')) {
             cy.log('The view has already been booked')
             } else {
                 cy.get(viewBooking.viewTimesHeader).should('contain', 'Select viewing times')
