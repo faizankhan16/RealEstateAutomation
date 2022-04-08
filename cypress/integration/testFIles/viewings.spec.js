@@ -3,6 +3,7 @@ import credential from "../fixtures/credential.json";
 import selectors from "../fixtures/selectors.json";
 import view from "../support/page_objects/view";
 import signOut from "../support/page_objects/signOut";
+
 const { emailTenant, newPassword, invalidEmail, invalidPassword, oldPassword } = credential.tenantLogin;
 const { viewBooking, viewCancelling } = selectors;
 const login = new SignIn()

@@ -52,6 +52,7 @@
     "saveNewPass": "input[onclick='return ValidatePasswords();'']",
     "viewBooking": {
         "homePage": "img[alt='Landing image']",
+        "viewingHeader": "div[class='dash-content col medium-12 small-12'] a",
         "searchButtonLandingPage": "#hero-search",
         "selectAHome": "a[class='open-item']",
         "crossButton": "span[class='icon icon-cross-circle']",
