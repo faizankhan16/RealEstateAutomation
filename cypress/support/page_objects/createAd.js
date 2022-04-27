@@ -2,7 +2,7 @@ import selectors from "../../fixtures/selectors.json"
 class CreateAd{
     
     createAd() {
-        cy.contains(/menu/i).click()
+        cy.contains(/menu/i).click({force: true})
         cy.get(selectors.dropDown).contains(/.+edit.+my.+ad.+/i).click({force: true})
         cy.get(selectors.locationNavBar).should('have.class', 'active')
 
@@ -18,16 +18,16 @@ class CreateAd{
 
         //Move in date
         cy.get(selectors.moveInCalendar).click()
-        cy.get(selectors.moveInMonth).select('May', {force: true})
-        cy.get(selectors.moveInDate).contains('20').click()
-        cy.get(selectors.moveInCalendar).should('have.value', '2022-05-20')
+        cy.get(selectors.month).select('Jun', {force: true})
+        cy.get(selectors.date).contains('20').click()
+        cy.get(selectors.moveInCalendar).should('have.value', '2022-06-20')
 
         //Move out date
         // cy.get('.MB20').check({force: true})
-        cy.get(selectors.moveoutCalendar).click({force: true})
-        cy.get(selectors.month).select('Nov', {force: true})
-        cy.get(selectors.moveOutdate).contains('22').click({force: true})
-        cy.get(selectors.moveoutCalendar).should('have.value', '2022-11-22')
+        cy.get(selectors.moveOutCalendar).click()
+        cy.get(selectors.month).select('Dec', {force: true})
+        cy.get(selectors.date).contains('22').click({force: true})
+        // cy.get(selectors.moveoutCalendar).should('have.value', '2022-12-22')
 
         //Monthly rent
         cy.get(selectors.rent).clear().type('2500').should('have.value', '2500')
@@ -52,7 +52,7 @@ class CreateAd{
 
         //Included in rent
         cy.get(selectors.includedInRent1).check({force: true}).should('be.checked')
-        cy.get(selectors.includedInRent).check({force: true}).should('be.checked')
+        cy.get(selectors.includedInRent2).check({force: true}).should('be.checked')
 
         //Next button
         cy.get(selectors.nextButton).click()
