@@ -7,7 +7,7 @@ const { email, newPassword, invalidEmail, invalidPassword, oldPassword } = crede
 
 
 
-describe('login form', () => {
+describe('login form 2', () => {
 
 beforeAll('visit the website', () => {
     var logout = new signOut()
