@@ -23,7 +23,7 @@ signIn(email, password) {
     this.signInDetails(email, password)
 
     //Submit
-    cy.get(selectors.submitButton).click({force: true})
+    
 
 }
 

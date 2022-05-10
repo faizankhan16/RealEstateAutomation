@@ -22,6 +22,9 @@
   "bugs": {
     "url": "https://github.com/faizankhan16/RealEstateAutomation/issues"
   },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+},
   "homepage": "https://github.com/faizankhan16/RealEstateAutomation#readme",
   "description": ""
 }
