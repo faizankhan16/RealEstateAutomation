@@ -23,8 +23,5 @@
     "url": "https://github.com/faizankhan16/RealEstateAutomation/issues"
   },
   "homepage": "https://github.com/faizankhan16/RealEstateAutomation#readme",
-  "description": "",
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
-    }
+  "description": ""
 }
