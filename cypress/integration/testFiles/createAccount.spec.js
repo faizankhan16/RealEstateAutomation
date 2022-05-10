@@ -1,7 +1,7 @@
-import CreateAccounts from "../support/page_objects/createAccounts.js"
-import SignIn from "../support/page_objects/signIn.js"
-import SignOut from "../support/page_objects/signOut.js"
-import CreateAd from "../support/page_objects/createAd.js"
+import CreateAccounts from "../../support/page_objects/createAccounts.js"
+import SignIn from "../../support/page_objects/signIn.js"
+import SignOut from "../../support/page_objects/signOut.js"
+import CreateAd from "../../support/page_objects/createAd.js"
 const registration = new CreateAccounts()
 const login = new SignIn()
 const logout = new SignOut()

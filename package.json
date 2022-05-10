@@ -17,11 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faizankhan16/RealEstateAutomation.git"
+    "url": "git+https://github.com/faizankhan16/cucumber.git"
   },
   "bugs": {
-    "url": "https://github.com/faizankhan16/RealEstateAutomation/issues"
+    "url": "https://github.com/faizankhan16/cucumber/issues"
   },
-  "homepage": "https://github.com/faizankhan16/RealEstateAutomation#readme",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+},
+  "homepage": "https://github.com/faizankhan16/cucumber#readme",
   "description": ""
 }
