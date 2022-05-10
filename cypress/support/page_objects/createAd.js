@@ -52,7 +52,6 @@ class CreateAd{
 
         //Included in rent
         cy.get(selectors.includedInRent1).check({force: true}).should('be.checked')
-        cy.get(selectors.includedInRent2).check({force: true}).should('be.checked')
 
         //Next button
         cy.get(selectors.nextButton).click()
@@ -62,7 +61,7 @@ class CreateAd{
         cy.get(selectors.describeProperty).should('have.class', 'active')
 
         // Description
-        cy.get(selectors.descriptionProperty).clear().type('This is a nice flat in the heart of the city.').should('have.value', 'This is a nice flat in the heart of the city.')
+        cy.get(selectors.descriptionProperty).clear({force: true}).type('This is a nice flat in the heart of the city.').should('have.value', 'This is a nice flat in the heart of the city.')
 
         //Furnishing
         cy.get(selectors.furnitureProperty).select('Flexible').should('have.value', '4')
@@ -94,9 +93,9 @@ class CreateAd{
 
         //choose slot
         cy.get(selectors.dateAndTimeForView).click()
-        cy.get(selectors.monthTimeSlot).select('Apr')
+        cy.get(selectors.monthTimeSlot).select('May')
         cy.get(selectors.dateTimeSlot).contains('16').click()
-        cy.get(selectors.dateAndTimeForView).should('have.value', '2022-04-16')
+        cy.get(selectors.dateAndTimeForView).should('have.value', '2022-05-16')
 
         //Save
         cy.get(selectors.finishButton).click()
